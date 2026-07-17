@@ -1,0 +1,58 @@
+[
+    {
+        "categoryId": 1,
+        "categoryName": "LAPTOPS",
+        "categoryImageId": "laptops",
+        "products": [
+            {
+                "productId": 1,
+                "categoryId": 1,
+                "productName": "HP Pavilion 15t Touch Laptop",
+                "price": 519.99,
+                "imageUrl": "1100"
+            },
+            {
+                "productId": 2,
+                "categoryId": 1,
+                "productName": "HP Pavilion 15z Laptop",
+                "price": 549.99,
+                "imageUrl": "1200"
+            },
+            {
+                "productId": 3,
+                "categoryId": 1,
+                "productName": "HP Pavilion 15z Touch Laptop",
+                "price": 449.99,
+                "imageUrl": "1300"
+            },
+            {
+                "productId": 5,
+                "categoryId": 1,
+                "productName": "HP Stream - 11-d020nr Laptop",
+                "price": 179.99,
+                "imageUrl": "1245"
+            },
+            {
+                "productId": 6,
+                "categoryId": 1,
+                "productName": "HP ENVY x360 - 15t Laptop",
+                "price": 699.99,
+                "imageUrl": "1600"
+            },
+            {
+                "productId": 7,
+                "categoryId": 1,
+                "productName": "HP ENVY - 17t Touch Laptop",
+                "price": 849.99,
+                "imageUrl": "1700"
+            },
+            {
+                "productId": 11,
+                "categoryId": 1,
+                "productName": "HP Pavilion x360 - 11t Touch Laptop",
+                "price": 319.99,
+                "imageUrl": "11100"
+            }
+        ]
+    }
+]

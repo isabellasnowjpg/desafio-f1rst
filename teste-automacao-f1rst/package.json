@@ -1,0 +1,17 @@
+{
+  "name": "teste-automacao-f1rst",
+  "version": "1.0.0",
+  "description": "Testes automatizados web e api - desafio F1RST",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:api": "cypress run --spec cypress/e2e/api_trello.feature",
+    "test:web": "cypress run --spec 'cypress/e2e/login.feature,cypress/e2e/compra.feature'"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "cypress": "^14.5.0",
+    "esbuild": "^0.25.0"
+  }
+}

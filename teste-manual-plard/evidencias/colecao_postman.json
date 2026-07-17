@@ -1,0 +1,81 @@
+{
+	"info": {
+		"name": "Advantage - API busca de produtos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buscar produto - laptop",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('status code 200', function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test('lista so tem produto da busca', function () {",
+							"    var data = pm.response.json();",
+							"    data.forEach(function (cat) {",
+							"        cat.products.forEach(function (p) {",
+							"            pm.expect(p.productName.toLowerCase()).to.include('laptop');",
+							"        });",
+							"    });",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.advantageonlineshopping.com/catalog/api/v1/products/search?name=laptop",
+					"protocol": "https",
+					"host": ["www", "advantageonlineshopping", "com"],
+					"path": ["catalog", "api", "v1", "products", "search"],
+					"query": [
+						{
+							"key": "name",
+							"value": "laptop"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "Buscar produto - sem resultado",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('status code 200', function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.advantageonlineshopping.com/catalog/api/v1/products/search?name=xyzabc",
+					"protocol": "https",
+					"host": ["www", "advantageonlineshopping", "com"],
+					"path": ["catalog", "api", "v1", "products", "search"],
+					"query": [
+						{
+							"key": "name",
+							"value": "xyzabc"
+						}
+					]
+				}
+			}
+		}
+	]
+}
