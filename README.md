@@ -29,3 +29,44 @@ npm test
 Abrir o Cypress no modo interativo:
 
 ```
+npm run test:open
+```
+
+Rodar só os testes de API:
+
+```
+npm run test:api
+```
+
+Rodar só os testes web:
+
+```
+npm run test:web
+```
+
+## Estrutura do projeto
+
+```
+cypress/
+  e2e/                          -> features em Gherkin (pt-br)
+    login.feature
+    compra.feature
+    api_trello.feature
+  support/
+    step_definitions/           -> implementação dos steps
+  fixtures/
+    usuario.json                -> dados do usuário de teste
+```
+
+## Cenários
+
+Web (automationexercise.com):
+- Login com usuário valido
+- Login com senha errada
+- Busca de produto
+- Incluir produto no carrinho
+- Validar o produto do carrinho na tela de pagamento (checkout)
+
+API:
+- GET em https://api.trello.com/1/actions/592f11060f95a3d3d46a987a
+- Valida o status code 200 e exibe o campo "name" da estrutura "list" (sai no log do teste)
